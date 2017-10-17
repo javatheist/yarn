@@ -93,7 +93,7 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "repository": "yarnpkg/yarn",
+  "repository": "javatheist/yarn",
   "bin": {
     "yarn": "./bin/yarn.js",
     "yarnpkg": "./bin/yarn.js"
