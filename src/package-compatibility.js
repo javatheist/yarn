@@ -105,6 +105,16 @@ export function checkOne(info: Manifest, config: Config, ignoreEngines: boolean)
   const pushError = msg => {
     const ref = info._reference;
     invariant(ref, 'expected package reference');
+    
+    /*
+    // this is just for testing purposes
+    // keep in mind that it's not possible to JSON.stringify "info" because info._reference contains a circular dependency
+    if (ref.name == "fsevents") {
+      for (let key in info) {
+        console.log(key, info[key]);
+      }
+    }
+    */
 
     // no location -> no previous fetch, possibly optional
     if (ref.optional || !info.location) {
